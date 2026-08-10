@@ -1,4 +1,4 @@
-PWD /home/lucas/my_files/latex_projects/CV_custom
+PWD /home/lucas/my_files/latex_projects/CV
 INPUT /var/lib/texmf/web2c/luahbtex/lualatex.fmt
 INPUT ./LucasFurer_CV.tex
 OUTPUT out/LucasFurer_CV.log

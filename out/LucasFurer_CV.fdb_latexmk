@@ -1,5 +1,5 @@
 # Fdb version 4
-["lualatex"] 1785944820.68285 "LucasFurer_CV.tex" "out/LucasFurer_CV.pdf" "LucasFurer_CV" 1785944821.82591 0
+["lualatex"] 1786322760.0639 "LucasFurer_CV.tex" "out/LucasFurer_CV.pdf" "LucasFurer_CV" 1786322761.15603 0
   "/home/lucas/.texlive/texmf-var/luatex-cache/generic/fonts/otl/fontawesome5brands-regular-400.luc" 1785363430.91448 180102 f7147e17e8de42719f8456d2132a6f53 ""
   "/home/lucas/.texlive/texmf-var/luatex-cache/generic/fonts/otl/fontawesome5free-solid-900.luc" 1785363430.86248 380927 d6fe6e53c3a00de94cfec2728177f905 ""
   "/home/lucas/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmmono10-regular.luc" 1785632905.92493 81824 2fc419936fbca23a4af140905084b7a2 ""
@@ -206,9 +206,9 @@
   "/usr/share/texmf-dist/tex/luatex/luatexbase/luatexbase.sty" 1775415801 10170 b1a2248f43cab899e3fe36f676176865 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1785370395 5383284 8220cc54e43043ffad6aad92498ef32f ""
   "/var/lib/texmf/web2c/luahbtex/lualatex.fmt" 1785370393 5658213 27761c463e34f091abb7dac3f03aadb4 ""
-  "LucasFurer_CV.tex" 1785944818.70116 14056 bf4a16b876f32392f4b1801a7422f3da ""
-  "figures/new_profile_pic.png" 1785437550.85582 291951 a0ffd0ad73466aa1c78d29150bae6dae ""
-  "out/LucasFurer_CV.aux" 1785944821.70921 272 f8c72de2f0d2c5ecc57c9f3617c0a903 "lualatex"
+  "LucasFurer_CV.tex" 1786322758.22686 14030 b3d169a522379c4ede17a13c89cf5e7b ""
+  "figures/new_profile_pic.png" 1785956650.66686 291951 a0ffd0ad73466aa1c78d29150bae6dae ""
+  "out/LucasFurer_CV.aux" 1786322761.04592 272 f8c72de2f0d2c5ecc57c9f3617c0a903 "lualatex"
   (generated)
   "out/LucasFurer_CV.aux"
   "out/LucasFurer_CV.log"
