@@ -1,19 +1,25 @@
 \documentclass[a4paper, 10pt]{scrartcl}
 
+
+\usepackage{fontspec}
+\newcommand{\mainFont}{Lora}
+%\setmainfont{\mainFont}[
+%  Path           = ./fonts/\mainFont/static/,
+%  Extension      = .ttf,
+%  UprightFont    = *-Regular,
+%  BoldFont       = *-Bold,
+%  ItalicFont     = *-Italic,
+%  BoldItalicFont = *-BoldItalic,
+%]
+
 \usepackage{xcolor}
 \usepackage{tikz}
-\usepackage{lmodern} % Allows arbitrary font scaling without size limits
+%\usepackage{lmodern} % Allows arbitrary font scaling without size limits
 \usepackage{graphicx}
 \usepackage{fontawesome5} % Icons: \faEnvelope, \faPhone, \faGithub, \faLinkedin, \faMapMarker, ...
-\usepackage{hyperref}     % Clickable mailto:/tel:/http links
+\usepackage{hyperref} % Clickable mailto:/tel:/http links
 
 \usetikzlibrary{calc} % Required for efficient coordinate calculations
-
-%\definecolor{background1}{HTML}{3d5b81}
-%\definecolor{background2}{HTML}{99c1da}
-%\definecolor{col3}{HTML}{dffbfc}
-%\definecolor{picBorderCol}{HTML}{293241}
-%\definecolor{linkCol}{HTML}{ee6b4d}
 
 \definecolor{background1}{HTML}{00171f}
 \definecolor{background2}{HTML}{00335a}
@@ -28,27 +34,12 @@
 	linkcolor=linkCol,
 }
 
-%\small, \normalsize, \large, \Large, \LARGE, \huge, \Huge
+% options for text: \small, \normalsize, \large, \Large, \LARGE, \huge, \Huge
 
 \pagestyle{empty}
 \begin{document}
 \begin{tikzpicture}[remember picture, overlay, shift={(current page.north west)}]
-	% (0,0) is now the top-left corner!
-	% Note: Points on the page will have positive X and negative Y values.
-	
-	% Draw a circle right at the top-left corner
-	%\fill[red] (0,0) circle (50pt);
-	
-	% Place a node 3cm to the right and 4cm down from the top-left corner
-	%\node[anchor=north west] at (4, -4) [draw, fill=white] {
-	%  Top-Left Origin Node
-	%};
-	
-	% Draw a diagonal line down and across the page
-	%\draw[blue, thick] (1, -1) -- (10, -10);
-% Top-Left: (0, 0)
-% Bottom-Right for A4: (21, -29.7)
-
+	% (0,0) is now the top-left corner.
 
 
 
@@ -500,6 +491,5 @@ A detail-oriented and enthusiastic MSc Computer Science graduate with a passion 
 
 
 \end{tikzpicture}
-%
-\end{document}
 
+\end{document}
