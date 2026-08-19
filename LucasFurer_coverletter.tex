@@ -1,0 +1,221 @@
+\documentclass[a4paper, 10pt]{scrartcl}
+
+
+\usepackage{fontspec}
+\newcommand{\mainFont}{NotoSerif}
+\setmainfont{\mainFont}[
+  Path           = ./fonts/\mainFont/static/,
+  Extension      = .ttf,
+  UprightFont    = *-Regular,
+  BoldFont       = *-Bold,
+  ItalicFont     = *-Italic,
+  BoldItalicFont = *-BoldItalic,
+]
+
+\usepackage{xcolor}
+\usepackage{tikz}
+%\usepackage{lmodern} % Allows arbitrary font scaling without size limits
+\usepackage{graphicx}
+\usepackage{fontawesome5} % Icons: \faEnvelope, \faPhone, \faGithub, \faLinkedin, \faMapMarker, ...
+\usepackage{hyperref} % Clickable mailto:/tel:/http links
+
+\usetikzlibrary{calc} % Required for efficient coordinate calculations
+
+\definecolor{background1}{HTML}{00171f}
+\definecolor{background2}{HTML}{00335a}
+\definecolor{col3}{HTML}{007da9}
+\definecolor{picBorderCol}{HTML}{ffffff}
+\definecolor{linkCol}{HTML}{490a83}
+
+% Make links colored instead of the default red/boxed look
+\hypersetup{
+	colorlinks=true,
+	urlcolor=linkCol,
+	linkcolor=linkCol,
+}
+
+% options for text: \small, \normalsize, \large, \Large, \LARGE, \huge, \Huge
+
+\pagestyle{empty}
+\begin{document}
+\begin{tikzpicture}[remember picture, overlay, shift={(current page.north west)}]
+	% (0,0) is now the top-left corner.
+
+
+
+
+	% --- background ------------------------------------
+	\pgfmathsetmacro{\splitpointX}{4}
+	\pgfmathsetmacro{\splitpointY}{-2.8}
+	\pgfmathsetmacro{\cornerpointUpX}{7.5}
+	\pgfmathsetmacro{\cornerpointUpY}{-4.5}
+
+	%\pgfmathsetmacro{\cornerpointDownX}{\cornerpointUpX}
+	%\pgfmathsetmacro{\cornerpointDownY}{-7.8}
+
+	\pgfmathsetmacro{\lastpointX}{4}
+	\pgfmathsetmacro{\lastpointY}{-6.2}
+
+	\fill[col3]
+        (-1,1) --
+        (-1,\lastpointY) --
+        % Bézier S-curve connecting the bottom level to the top level
+        (\lastpointX,\lastpointY) .. controls (\lastpointX + 2, \lastpointY) and (\cornerpointUpX - 2, \cornerpointUpY) .. (\cornerpointUpX,\cornerpointUpY) --
+        (22,\cornerpointUpY) --
+        (22,1) --
+        cycle;
+
+
+	%\fill[background2]
+        %(-1,1) --
+        %(-1,\splitpointY) --
+        %% Bézier S-curve connecting the bottom level to the top level
+        %(\splitpointX,\splitpointY) .. controls (\splitpointX + 2, \splitpointY) and (\cornerpointDownX - 2, \cornerpointDownY) .. (\cornerpointDownX,\cornerpointDownY) --
+        %(22,\cornerpointDownY) --
+        %(22,1) --
+        %cycle;
+
+	\fill[background1]
+        (-1,1) --
+        (-1,\splitpointY) --
+        % Bézier S-curve connecting the bottom level to the top level
+        (\splitpointX,\splitpointY) .. controls (\splitpointX + 2, \splitpointY) and (\cornerpointUpX - 2, \cornerpointUpY) .. (\cornerpointUpX,\cornerpointUpY) --
+        (22,\cornerpointUpY) --
+        (22,1) --
+        cycle;
+
+
+
+
+
+
+
+
+
+
+
+
+
+	% --- title name ------------------------------------
+	\node[anchor=north west, text=white, font=\fontsize{42}{50}\selectfont\bfseries] at (7, -2.0)
+	{
+		Lucas Furer
+	};
+
+
+
+
+
+
+
+	% --- Contact section ------------------------------------
+	% \faXXX gives the icon, \href{...}{...} makes it clickable.
+	% mailto: opens the default mail client with the address
+	% pre-filled; tel: does the same for a phone/dialer app.
+	% On both PC and phone PDF readers you can usually also
+	% right-click (or long-press) the link to copy it directly.
+	\node[anchor=north west, align=left] at (0.5, -2.92)
+	{
+		\renewcommand{\arraystretch}{1.4}
+		\begingroup
+		\hypersetup{urlcolor=black}
+		\begin{tabular}{@{}l l@{}}
+			\faLinkedin   & \href{https://www.linkedin.com/in/lucas-furer-22a38a323/}{lucas-furer} \\
+			\faGithub     & \href{https://github.com/LucasFurer}{LucasFurer} \\
+			\faEnvelope   & \href{mailto:lucas.furer@gmail.com}{lucas.furer@gmail.com} \\
+			\faPhone      & \href{tel:+31652772875}{+31 6 5277 2875} \\
+			\faMapMarker  & Delft, NL \\
+		\end{tabular}
+		\endgroup
+	};
+
+
+
+
+
+
+
+
+	% --- section variables ------------------------------------
+	\coordinate (sectStart) at ($(3.0,-7.2)$);
+
+
+	\pgfmathsetmacro{\horGapSmall}{0.15} % space between text and the line
+	\pgfmathsetmacro{\horGapLarge}{16.0} % space between line and dates
+	\pgfmathsetmacro{\textWidth}{15.0} % width of the text
+
+	\pgfmathsetmacro{\vertTextGap}{0.05} % spacing between text
+	\pgfmathsetmacro{\vertSubGap}{0.1} % spacing between sub headers
+	\pgfmathsetmacro{\vertSectGap}{0.3} % spacing between sections
+
+
+
+
+
+
+	% --- text ------------------------------------
+	\coordinate (eduStart) at ($(sectStart)$);
+
+
+	%\node[anchor=north east, align=left, font=\Large] 
+	%	at ($(eduStart) + (-\horGapSmall,0)$)
+	%{
+	%	\textbf{Education}
+	%};
+
+
+	\node[anchor=north west, align=left, text width=\textWidth cm] (eduEntryA) 
+		at ($(eduStart) + (\horGapSmall,0)$)
+	{
+Dear Blender team,\\
+\vspace{1em}
+I am writing to apply for a software engineering position at Blender. I recently graduated from TU Delft with a Master's degree in Computer Science, specializing in physics-based simulations and computer graphics. I would be excited to bring that experience to your team.\\
+\vspace{1em}
+What draws me to Blender is the quality of the software that you build and the open source, community-driven philosophy. I am an agile and self-sufficient person who is comfortable taking ownership of a problem and driving it to completion without needing a lot of structure around me.\\
+\vspace{1em}
+My interest in graphics and simulation is what turned programming from a routine skill into a genuine passion. Early on, coding was more about solving the problem at hand. Once I started creating visualization and simulation software, I began to truly enjoy what I had made. For my Master's thesis, I implemented a fast multipole N-body solver in C++ and integrated it into t-SNE with an OpenGL visualization layer to inspect the results directly. My Bachelor's thesis explored how ray reflection distributions evolve under microstructure smoothing, again implemented in C++. Outside of my coursework, I built a Blender addon that generates terrain using simulated hydraulic erosion. I also led a small team building procedural terrain generation with Perlin noise and Marching Cubes in Unity. I wish to keep making efficient software centered around simulation and graphics which I think makes me a strong fit for what Blender does.\\
+\vspace{1em}
+Beyond the technical side, I bring strong team and communication experience as well. During my internship at Feedback Analytics, I led a five-person team and worked directly with the client to gather requirements, which taught me how to communicate clearly and keep a project moving without heavy oversight.\\
+\vspace{1em}
+I would welcome the opportunity to contribute to Blender's development, whether on simulation tooling, rendering, or other areas where I can add value. Thank you for considering my application. I would be glad to discuss how my background could fit your team.\\
+\vspace{1em}
+Sincerely,\\
+Lucas Furer
+	};
+	%\node[anchor=north east, align=left] 
+	%	at ($(eduEntryA.north west) + (\horGapLarge,0)$)
+	%{
+	%	\textbf{2023-2026}
+	%};
+
+
+
+	\coordinate (eduEnd) at ($(eduStart |- eduEntryA.south)$);
+	\draw[background2, line width=1pt]
+		($(eduStart)$) --
+		($(eduEnd)$);
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{tikzpicture}
+
+\end{document}
