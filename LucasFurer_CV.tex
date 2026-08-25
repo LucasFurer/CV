@@ -38,6 +38,10 @@
 
 \pagestyle{empty}
 \begin{document}
+
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+
 \begin{tikzpicture}[remember picture, overlay, shift={(current page.north west)}]
 	% (0,0) is now the top-left corner.
 
@@ -345,7 +349,7 @@ A detail-oriented and enthusiastic MSc Computer Science graduate with a passion 
 		at ($(skiHeader.south -| skiStart) + (\horGapSmall,0)$)
 	{
 		\textbf{C++}\\
-		Libraries: Boost, Eigen, Fastor, GLM, OpenGL, GLFW%, FFTW, Vulkan
+		Libraries: Boost, Eigen, Fastor, GLM, OpenGL, GLFW, Vulkan%, FFTW
 	};
 	\node[anchor=north east, align=left, font=\normalsize] 
 		at ($(skiEntryA.north west) + (-2 * \horGapSmall,0)$)
