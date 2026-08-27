@@ -102,11 +102,11 @@
 
 
 	% --- title name ------------------------------------
-	\node[anchor=north west, text=white, font=\fontsize{42}{50}\selectfont\bfseries] at (7, -1.0)
+	\node[anchor=north west, text=white, font=\fontsize{42}{50}\selectfont\bfseries] at (6.8, -1.0)
 	{
 		Lucas Furer
 	};
-	\node[anchor=north west, text=white, font=\fontsize{20}{25}\selectfont] at (7, -2.5)
+	\node[anchor=north west, text=white, font=\fontsize{20}{25}\selectfont] at (6.8, -2.5)
 	{
 		Computer Science graduate
 	};
@@ -159,9 +159,10 @@
 
 
 	% --- summary ------------------------------------
-	\node[anchor=north west, text width=13.2cm,align=left, text=white, font=\large] at (7.0, -4.6)
+	\node[anchor=north west, text width=13.7cm,align=left, text=white, font=\large] at (6.8, -4.6)
 	{
-A detail-oriented and enthusiastic MSc Computer Science graduate with a passion for physics-based simulations, computer graphics and open-source principles. I am an eager learner who enjoys collaborating with others and exploring new technologies. Experienced with C++, Java, GLSL and Python.
+%A detail-oriented and enthusiastic MSc Computer Science graduate with a passion for physics-based simulations, computer graphics and open-source principles. I am an eager learner who enjoys collaborating with others and exploring new technologies. Experienced with C++, Java, GLSL and Python.
+Ik ben een nauwkeurige en gemotiveerde MSc in Computer Science met een sterke basis in C++ en Python. Ik werk graag samen in een hecht team, denk actief mee over de beste technische oplossingen en maak nieuwe technologieën en tools snel eigen. Ik heb ervaring met C++, Python, Java, GLSL en Docker.
 	};
 
 
@@ -174,12 +175,12 @@ A detail-oriented and enthusiastic MSc Computer Science graduate with a passion 
 
 
 	% --- section variables ------------------------------------
-	\coordinate (sectStart) at ($(3.9,-9.2)$);
+	\coordinate (sectStart) at ($(4.2,-9.2)$);
 
 
-	\pgfmathsetmacro{\horGapSmall}{0.15} % space between text and the line
+	\pgfmathsetmacro{\horGapSmall}{0.10} % space between text and the line
 	\pgfmathsetmacro{\horGapLarge}{16.0} % space between line and dates
-	\pgfmathsetmacro{\textWidth}{15.5} % width of the text
+	\pgfmathsetmacro{\textWidth}{16.0} % width of the text
 
 	\pgfmathsetmacro{\vertTextGap}{0.05} % spacing between text
 	\pgfmathsetmacro{\vertSubGap}{0.1} % spacing between sub headers
@@ -197,7 +198,7 @@ A detail-oriented and enthusiastic MSc Computer Science graduate with a passion 
 	\node[anchor=north east, align=left, font=\Large] 
 		at ($(eduStart) + (-\horGapSmall,0)$)
 	{
-		\textbf{Education}
+		\textbf{Opleiding}
 	};
 
 
@@ -205,9 +206,9 @@ A detail-oriented and enthusiastic MSc Computer Science graduate with a passion 
 		at ($(eduStart) + (\horGapSmall,0)$)
 	{
 		\textbf{M.Sc. Computer Science}, \textit{TU Delft}\\
-		$\bullet$ \textbf{Thesis:} \href{https://repository.tudelft.nl/record/uuid:67d958d3-0b23-4e1f-b2a1-9c183e590d57}{\textbf{FMM-t-SNE}} Implemented a fast multipole N-body solver and integrated it into t-SNE. Developed in C++ with OpenGL visualization\\
-		$\bullet$ \textbf{Grade:} 8.5\\
-		$\bullet$ \textbf{Notable courses:} Image Processing, Graphics and Animation, Geometric data Processing\\
+		$\bullet$ \textbf{Scriptie:} \href{https://repository.tudelft.nl/record/uuid:67d958d3-0b23-4e1f-b2a1-9c183e590d57}{\textbf{FMM-t-SNE}} Implementeerde een fast multipole N-body solver en integreerde deze in t-SNE. Ontwikkeld in C++ en OpenGL\\
+		$\bullet$ \textbf{Cijfer:} 8.5\\
+		$\bullet$ \textbf{Relevante vakken:} Security and Cryptography, Reasoning about Software, Systems Security\\
 	};
 	\node[anchor=north east, align=left] 
 		at ($(eduEntryA.north west) + (\horGapLarge,0)$)
@@ -216,20 +217,22 @@ A detail-oriented and enthusiastic MSc Computer Science graduate with a passion 
 	};
 
 
+
 	\node[anchor=north west, align=left, text width=\textWidth cm] (eduEntryB)
 		at ($(eduEntryA.south west) + (0,-\vertTextGap)$)
 	{
 		\textbf{B.Sc. Computer Science}, \textit{TU Delft}\\
-		$\bullet$ \textbf{Thesis:} \href{https://resolver.tudelft.nl/uuid:80fc65a8-db1c-439c-ad55-46d94739ab02}{\textbf{Soft Peaks}} Studied how the distribution of ray reflections evolve as smoothing is applied to microstructures. Implemented in C++ with results rendered to \texttt{.ppm}\\
-		$\bullet$ \textbf{Grade:} 7.5\\
+		$\bullet$ \textbf{Scriptie:} \href{https://resolver.tudelft.nl/uuid:80fc65a8-db1c-439c-ad55-46d94739ab02}{\textbf{Soft Peaks}} Onderzocht hoe de verdeling van lichtstraalreflecties verandert bij het smoothen van microstructuren. Geïmplementeerd in C++, resultaten gerenderd naar \texttt{.ppm}\\
+		$\bullet$ \textbf{Cijfer:} 7,5\\
 		$\bullet$ \textbf{Minor:} Security, Safety \& Justice\\
-		$\bullet$ \textbf{Notable courses:} Linear Algebra, Big Data Processing, Computer Graphics\\
+		$\bullet$ \textbf{Relevante vakken:} Data Mining, Big Data Processing, Computer Graphics\\
 	};
 	\node[anchor=north east, align=left] 
 		at ($(eduEntryB.north west) + (\horGapLarge,0)$)
 	{
 		\textbf{2019-2023}
 	};
+
 
 
 	\coordinate (eduEnd) at ($(eduStart |- eduEntryB.south)$);
@@ -255,21 +258,22 @@ A detail-oriented and enthusiastic MSc Computer Science graduate with a passion 
 	\node[anchor=north east, align=left, font=\Large] (expHeader)
 		at ($(expStart) + (-\horGapSmall,0)$)
 	{
-		\textbf{Experience}
+		\textbf{Ervaring}
 	};
  
  
+
 	\node[anchor=north west, align=left, text width=\textWidth cm] (expEntryA)
 		at ($(expHeader.south -| expStart) + (\horGapSmall,0)$)
 	{
 		\textbf{Feedback Analytics}, \textit{Software Engineer}\\
-		$\bullet$ Developed a visualization tool for user-created questionnaires using Angular 13\\ 
-		$\bullet$ Lead a five-person team, collaborating closely with the client to gather requirements
+		$\bullet$ Ontwikkelde een visualisatietool voor gebruikers opgestelde vragenlijsten met Angular 13\\ 
+		$\bullet$ Gaf leiding aan een team van vijf personen en werkte nauw samen met de klant om de eisen in kaart te brengen.
 	};
 	\node[anchor=north east, align=left, font=\normalsize] 
 		at ($(expEntryA.north west) + (-2 * \horGapSmall,0)$)
 	{
-		\textit{Internship}
+		\textit{Stage}
 	};
 	\node[anchor=north east, align=left] 
 		at ($(expEntryA.north west) + (\horGapLarge,0)$)
@@ -278,17 +282,18 @@ A detail-oriented and enthusiastic MSc Computer Science graduate with a passion 
 	};
 
 
+
 	\node[anchor=north west, align=left, text width=\textWidth cm] (expEntryB)
 		at ($(expEntryA.south west) + (0,-\vertSubGap)$)
 	{
-		\textbf{Blender Addon}, \textit{Author}\\
-		$\bullet$ Created a Blender addon that generates terrain using simulated hydraulic erosion\\
-		$\bullet$ \textbf{Source Code:} \href{https://github.com/LucasFurer/my_blender_addon}{https://github.com/LucasFurer/my\_blender\_addon}
+		\textbf{Blender Addon}, \textit{Ontwikkelaar}\\
+		$\bullet$ Creëerde een Blender-addon die terrein genereert met gesimuleerde hydraulische erosie\\
+		$\bullet$ \textbf{Code:} \href{https://github.com/LucasFurer/my_blender_addon}{https://github.com/LucasFurer/my\_blender\_addon}
 	};
 	\node[anchor=north east, align=left, font=\normalsize] 
 		at ($(expEntryB.north west) + (-2 * \horGapSmall,0)$)
 	{
-		\textit{Projects}
+		\textit{Projecten}
 	};
 	\node[anchor=north east, align=left] 
 		at ($(expEntryB.north west) + (\horGapLarge,0)$)
@@ -297,17 +302,18 @@ A detail-oriented and enthusiastic MSc Computer Science graduate with a passion 
 	};
 
 
+
 	\node[anchor=north west, align=left, text width=\textWidth cm] (expEntryC)
 		at ($(expEntryB.south west) + (0,-\vertSubGap)$)
 	{
-		\textbf{Independent Game Development}, \textit{Software Engineer}\\
-		$\bullet$ Organized a four-person team to create a game using Unity and C\# \\
-		$\bullet$ Developed procedural terrain generation using Perlin noise and the Marching Cubes\\ algorithm
+		\textbf{Campus Reservation \& Food Ordering System}, \textit{Software Engineer}\\
+		$\bullet$ Ontwierp het databaseschema en bouwde de applicatie met Spring Boot, JavaFX en GitLab CI/CD\\
+		$\bullet$ Vervulde de rol van Scrum Master binnen een Agile team
 	};
 	\node[anchor=north east, align=left] 
-		at ($(expEntryB.north west) + (\horGapLarge,0)$)
+		at ($(expEntryC.north west) + (\horGapLarge,0)$)
 	{
-		\textbf{2025}
+		\textbf{2019}
 	};
 
 
@@ -341,7 +347,7 @@ A detail-oriented and enthusiastic MSc Computer Science graduate with a passion 
 	\node[anchor=north east, align=left, font=\Large] (skiHeader)
 		at ($(skiStart) + (-\horGapSmall,0)$)
 	{
-		\textbf{Skills}
+		\textbf{Vaardigheden}
 	};
 
 
@@ -354,7 +360,7 @@ A detail-oriented and enthusiastic MSc Computer Science graduate with a passion 
 	\node[anchor=north east, align=left, font=\normalsize] 
 		at ($(skiEntryA.north west) + (-2 * \horGapSmall,0)$)
 	{
-		\textit{Programming}
+		\textit{Programmeren}
 	};
 %	\node[anchor=north east, align=left] 
 %		at ($(skiEntryA.north west) + (\horGapLarge,0)$)
@@ -379,7 +385,7 @@ A detail-oriented and enthusiastic MSc Computer Science graduate with a passion 
 	\node[anchor=north west, align=left, text width=\textWidth cm] (skiEntryC)
 		at ($(skiEntryB.south west) + (0,-\vertTextGap)$)
 	{
-		\textbf{x86-Assembly, HTML, CSS, Javascript, Scala, Rocq, Haskell, SQL, MiniZinc}\\
+		\textbf{Lua, Regex, HTML, CSS, Javascript, Scala, Rocq, Haskell, SQL, MiniZinc}\\
 	};
 %	\node[anchor=north east, align=left] 
 %		at ($(skiEntryC.north west) + (\horGapLarge,0)$)
@@ -391,7 +397,7 @@ A detail-oriented and enthusiastic MSc Computer Science graduate with a passion 
 	\node[anchor=north west, align=left, text width=\textWidth cm] (skiEntryD)
 		at ($(skiEntryC.south west) + (0,-\vertSubGap)$)
 	{
-		\textbf{CMake, Docker, Linux, Bash, Git, Blender, LaTeX}\\	
+		\textbf{CMake, Docker, Linux, Bash, Git, Blender, \LaTeX}\\	
 	};
 	\node[anchor=north east, align=left, font=\normalsize] 
 		at ($(skiEntryD.north west) + (-2 * \horGapSmall,0)$)
@@ -403,12 +409,12 @@ A detail-oriented and enthusiastic MSc Computer Science graduate with a passion 
 	\node[anchor=north west, align=left, text width=\textWidth cm] (skiEntryE)
 		at ($(skiEntryD.south west) + (0,-\vertSubGap)$)
 	{
-		\textbf{Dutch}, Native\quad \quad \textbf{English}, Fluent\\
+		\textbf{Nederlands}, Moedertaal\quad \quad \textbf{Engels}, Vloeiend\\
 	};
 	\node[anchor=north east, align=left, font=\normalsize] 
 		at ($(skiEntryE.north west) + (-2 * \horGapSmall,0)$)
 	{
-		\textit{Language}
+		\textit{Taal}
 	};
  
  
@@ -429,17 +435,17 @@ A detail-oriented and enthusiastic MSc Computer Science graduate with a passion 
 	\node[anchor=north east, align=left, font=\large] 
 		at ($(misStart) + (-\horGapSmall,0)$)
 	{
-		\textbf{Extracurricular}\\
-		\textbf{Activities}
+		\textbf{Extracurriculaire}\\
+		\textbf{Activiteiten}
 	};
  
  
 	\node[anchor=north west, align=left, text width=\textWidth cm] (misEntryA) 
 		at ($(misStart) + (\horGapSmall,0)$)
 	{
-		\textbf{D.S.M.G. Krashna Musika}, \textit{Bass singer}\\
-		$\bullet$ Performed with a classical music student association in concerts across Europe\\
-		$\bullet$ Developed teamwork, discipline and performance skills through rehearsals and live\\ performances
+		\textbf{D.S.M.G. Krashna Musika}, \textit{Bas zanger}\\
+		$\bullet$ Trad op met een klassieke muziek studentvereniging tijdens concerten in Europa\\
+		$\bullet$ Ontwikkelde teamwork en podiumvaardigheden door repetities en live optredens
 	};
 	\node[anchor=north east, align=left]
 		at ($(misEntryA.north west) + (\horGapLarge,0)$)
@@ -452,7 +458,7 @@ A detail-oriented and enthusiastic MSc Computer Science graduate with a passion 
 		at ($(misEntryA.south west) + (0,-\vertTextGap)$)
 	{
 		\textbf{D.S.B.V. Yoroshi}\\
-		$\bullet$ Practised judo at a student budosport association\\
+		$\bullet$ Beoefende judo bij een studenten budosportvereniging\\
 	};
 	\node[anchor=north east, align=left]
 		at ($(misEntryB.north west) + (\horGapLarge,0)$)
@@ -480,14 +486,14 @@ A detail-oriented and enthusiastic MSc Computer Science graduate with a passion 
 	\node[anchor=north east, align=left, font=\Large] 
 		at ($(hobStart) + (-\horGapSmall,0)$)
 	{
-		\textbf{Interests}
+		\textbf{Interesses}
 	};
 
 
 	\node[anchor=north west, align=left, text width=\textWidth cm] (hobEntryA) 
 		at ($(hobStart) + (\horGapSmall,0)$)
 	{
-		Playing piano, creating games/simulations, running, bouldering\\
+		Piano spelen, Games/simulations coderen, hardlopen, bouldering\\
 	};
 
 
